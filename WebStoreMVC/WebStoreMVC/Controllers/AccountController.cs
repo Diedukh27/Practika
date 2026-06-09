@@ -79,6 +79,7 @@ public class AccountController(
             if (result.Succeeded)
             {
                 result = await userManager.AddToRoleAsync(user, Roles.User);
+                await signInManager.SignInAsync(user, false); // залогінюємо користувача
                 return RedirectToAction("Index", "Home");
             }
             else

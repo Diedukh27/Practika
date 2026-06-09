@@ -1,5 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
 
+using System.ComponentModel.DataAnnotations;
+
+namespace WebStoreMVC.Models.Account;
 public class RegisterViewModel
 {
     [Display(Name = "Прізвище")]
