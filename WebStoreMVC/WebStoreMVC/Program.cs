@@ -5,6 +5,8 @@ using WebStoreMVC;
 using WebStoreMVC.Data;
 using WebStoreMVC.Data.Entities.Identity;
 using WebStoreMVC.Interfaces;
+using WebStoreMVC.Mapper;
+using WebStoreMVC.Migrations;
 using WebStoreMVC.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,6 +30,7 @@ builder.Services.AddIdentity<UserEntity, RoleEntity>(options =>
     .AddDefaultTokenProviders();
 
 builder.Services.AddScoped<IImageService, ImageService>();
+builder.Services.AddSingleton<CategoryMapper>();
 
 builder.Services.AddControllersWithViews();
 

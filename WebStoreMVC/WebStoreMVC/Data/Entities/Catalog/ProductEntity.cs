@@ -3,8 +3,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebStoreMVC.Data.Entities.Catalog;
 
-
-
 [Table("tblProducts")]
 public class ProductEntity : BaseEntity<long>
 {
@@ -23,4 +21,6 @@ public class ProductEntity : BaseEntity<long>
     public long CategoryId { get; set; }
 
     public CategoryEntity? Category { get; set; }
+
+    public ICollection<ProductImageEntity>? ProductImages { get; set; }
 }
