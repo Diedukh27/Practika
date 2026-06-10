@@ -1,5 +1,0 @@
-Технології
-1.ASP.NET Core MVC
-2.PostgreSQL
-3.Bootstrap
-4.Визначитися з назвою проекту
