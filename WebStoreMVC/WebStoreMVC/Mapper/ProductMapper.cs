@@ -2,6 +2,7 @@
 
 using Riok.Mapperly.Abstractions;
 using WebStoreMVC.Data.Entities.Catalog;
+using WebStoreMVC.Models.Product;
 using WebStoreMVC.Models.Seeder;
 
 [Mapper]
@@ -13,6 +14,7 @@ public partial class ProductMapper
     public partial ProductEntity SeederProductModelToProductEntity(SeederProductModel model);
 
     [MapProperty(nameof(ProductEntity.Category.Name), nameof(ProductItemModel.CategoryName))]
+    [MapProperty(nameof(ProductEntity.Category.Slug), nameof(ProductItemModel.CategorySlug))]
     [MapProperty(nameof(ProductEntity.ProductImages), nameof(ProductItemModel.Images))]
     public partial ProductItemModel ProductEntityToProductItemModel(ProductEntity entity);
 
