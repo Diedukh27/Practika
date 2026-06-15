@@ -2,6 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using WebStoreMVC.Data.Entities.Catalog;
 using WebStoreMVC.Data.Entities.Identity;
+using WebStoreMVC.Data.Entities.Order;
+using WebStoreMVC.Data.Entities.Order;
 
 namespace WebStoreMVC.Data;
 
@@ -18,6 +20,11 @@ public class MyContextShopMVC : IdentityDbContext<UserEntity, RoleEntity, long>
     public DbSet<ProductEntity> Products { get; set; }
 
     public DbSet<ProductImageEntity> ProductImages { get; set; }
+
+    public DbSet<OrderStatusEntity> OrderStatuses { get; set; }
+    public DbSet<OrderEntity> Orders { get; set; }
+    public DbSet<OrderItemEntity> OrderItems { get; set; }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
